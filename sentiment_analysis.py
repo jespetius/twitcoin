@@ -1,7 +1,8 @@
 import plac
+import pandas as pd
 import random
 import pathlib
-import cytoolz
+import toolz
 import numpy
 from keras.models import Sequential, model_from_json
 from keras.layers import LSTM, Dense, Embedding, Bidirectional
@@ -33,7 +34,7 @@ class SentimentAnalyser(object):
         self.set_sentiment(doc, y)
 
     def pipe(self, docs, batch_size=1000):
-        for minibatch in cytoolz.partition_all(batch_size, docs):
+        for minibatch in toolz.partition_all(batch_size, docs):
             minibatch = list(minibatch)
             sentences = []
             for doc in minibatch:
@@ -166,22 +167,21 @@ def evaluate(model_dir, texts, labels, max_length=100):
 
 
 def read_data(data_dir, limit=0):
-    examples = []
-    for subdir, label in (("pos", 1), ("neg", 0)):
-        for filename in (data_dir / subdir).iterdir():
-            with filename.open() as file_:
-                text = file_.read()
-            examples.append((text, label))
-    random.shuffle(examples)
+    dataset=pd.read_csv(data_dir, 'Tweet_Sentiment.csv')    
+    tweets = dataset.get('Tweet')    
+    sentiments = dataset.get('Sentiment') 
+    collection = (tweets,sentiments)   
+    example=zip(collection)    
+    example=list(example)
     if limit >= 1:
         examples = examples[:limit]
     return zip(*examples)  # Unzips into two lists
-
+    
 
 @plac.annotations(
-    train_dir=("Location of training file or directory"),
-    dev_dir=("Location of development file or directory"),
-    model_dir=("Location of output model directory",),
+    train_dir=("./Tweet_Sentiment.csv"),
+    dev_dir=("test/Tweet_Sentiment.csv"),
+    model_dir=("model_lstm",),
     is_runtime=("Demonstrate run-time usage", "flag", "r", bool),
     nr_hidden=("Number of hidden units", "option", "H", int),
     max_length=("Maximum sentence length", "option", "L", int),
@@ -192,9 +192,9 @@ def read_data(data_dir, limit=0):
     nr_examples=("Limit to N examples", "option", "n", int),
 )
 def main(
-    model_dir=None,
-    train_dir=None,
-    dev_dir=None,
+    model_dir='model_lstm',
+    train_dir=pathlib.Path('./Tweet_Sentiment.csv'),
+    dev_dir=pathlib.Path('test/Tweet_Sentiment.csv'),
     is_runtime=False,
     nr_hidden=64,
     max_length=100,  # Shape
