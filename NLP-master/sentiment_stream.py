@@ -6,7 +6,7 @@ import tweepy
 from IPython.display import display
 import matplotlib.pyplot as plt
 
-
+#  auth.py import
 from auth import (
     consumer_key,
     consumer_secret,
@@ -14,10 +14,12 @@ from auth import (
     access_token_secret)
 
 
+# Putsataan twiitit
 def clean_tweet(tweet):
     return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", tweet).split())
 
 
+# Sentiment analysis TextBlobilla
 def analize_sentiment(tweet):
     analysis = TextBlob(clean_tweet(tweet))
     if analysis.sentiment.polarity > 0:
@@ -28,6 +30,7 @@ def analize_sentiment(tweet):
         return -1
 
 
+# Tweet stream
 class TwitterStreamListener(tweepy.StreamListener):
     def on_status(self, status):
         print(status.text)
@@ -43,5 +46,5 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True,
                  retry_count=10, retry_delay=5, retry_errors=5)
 streamListener = TwitterStreamListener()
 myStream = tweepy.Stream(auth=api.auth, listener=streamListener)
-
-myStream.filter(track=["trump"])
+# Hakusana
+myStream.filter(track=["premier league"])
