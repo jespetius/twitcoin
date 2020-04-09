@@ -1,19 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""
-tweets_sentiment.py
-Date created: 22-Nov-2018
-Version: 1.0
-Author: Stein Castillo
-Copyright 2018 Stein Castillo <stein_castillo@yahoo.com>  
-
-USAGE: python tweets_sentiment.py --file <tweets_file>
-"""
-
-#############
-# Libraries
-#############
 import argparse
 import warnings
 import json
@@ -27,11 +11,13 @@ from nltk.tokenize import sent_tokenize, word_tokenize, TweetTokenizer
 # Functions
 #############
 
+
 def read_json(json_file):
     with open(json_file) as file:
         list = json.load(file)
     file.close()
     return list
+
 
 def remove_links(text):
     urls = re.finditer('http\S+', text)
@@ -39,12 +25,13 @@ def remove_links(text):
         try:
             text = re.sub(i.group().strip(), '', text)
         except:
-            pass      
+            pass
     return (text)
 
 #############
 # Constants
 #############
+
 
 # These constants control the behavior the this routine. Change them accordingly.
 PRINT_OUT = True       # True if tweets should be display when processed
@@ -54,11 +41,13 @@ FILE_ENCODING = 'utf-8'
 #############
 # Classes
 #############
-class NormalizeText():   
+
+
+class NormalizeText():
     def remove_special(s):
         # Special characters dictionary
-        SPECIAL_CHARS = {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u', 'ü':'u',
-                         'Á':'A', 'É':'E', 'Í':'I', 'Ó':'O', 'Ú':'U'}
+        SPECIAL_CHARS = {'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u', 'ü': 'u',
+                         'Á': 'A', 'É': 'E', 'Í': 'I', 'Ó': 'O', 'Ú': 'U'}
         for char in SPECIAL_CHARS:
             s = s.replace(char, SPECIAL_CHARS[char])
         return s
@@ -70,23 +59,24 @@ class NormalizeText():
 
     def remove_flags(s):
         # Flags dictionary
-        FLAGS = {'RT':''}
+        FLAGS = {'RT': ''}
         for flag in FLAGS:
             s = s.replace(flag, FLAGS[flag])
         return s
 
     def remove_nonascii(s):
-        s = re.sub(r'[^\x00-\x7f]',r'', s)
+        s = re.sub(r'[^\x00-\x7f]', r'', s)
         return s
 
 #############
 # Main Loop
 #############
 
-#construct the command line argument parser and parse the arguments
+
+# construct the command line argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument('-f', '--file', required=True,
-    help='usage: python tweets_sentiment.py --file <file>')
+                help='usage: python tweets_sentiment.py --file <file>')
 args = vars(ap.parse_args())
 warnings.filterwarnings("ignore")
 
@@ -97,11 +87,11 @@ tweet_file = args['file']
 file_check = Path(tweet_file)
 if not(file_check.is_file()):
     # file does not exist
-    print ('[Error] File does not exist.')
+    print('[Error] File does not exist.')
     exit()
 
 # Read the tweets file
-print ('Reading tweets file...')
+print('Reading tweets file...')
 tweets = read_json(tweet_file)
 
 # Initalize tweeter tokenizer
@@ -115,11 +105,11 @@ tss1 = 0.0
 tss2 = 0.0
 
 # Analyze tweet sentiment
-print ('Analyzing tweet sentiment...')
+print('Analyzing tweet sentiment...')
 
 if PRINT_OUT:
     print('--------------------------------------------------------------------------------------------------------------------------------')
-    print ('TextBlob | NLTK  |                                    Tweet text                            | Sentences | Words  | Unique Words')
+    print('TextBlob | NLTK  |                                    Tweet text                            | Sentences | Words  | Unique Words')
     print('--------------------------------------------------------------------------------------------------------------------------------')
 
 for tweet in tweets:
@@ -130,7 +120,7 @@ for tweet in tweets:
         line = tweet['text']
     else:
         line = tweet['full_text']
-        
+
     # Remove leading and trailing spaces
     line = line.strip()
     # Remove links
@@ -151,36 +141,37 @@ for tweet in tweets:
     ss1 = TextBlob(line)
     ss2 = sid.polarity_scores(line)
 
-    # Update cumulators 
+    # Update cumulators
     tss1 += ss1.sentiment.polarity
     tss2 += ss2['compound']
 
     # Add sentiment results to the JSON
     if UPDATE_FILE:
-        tweet.update({'sentiment':{'textblob':ss1.sentiment.polarity, 'nltk':ss2['compound']}})
+        tweet.update(
+            {'sentiment': {'textblob': ss1.sentiment.polarity, 'nltk': ss2['compound']}})
 
     # Display results
     if PRINT_OUT:
-        print ('{:8.2f} | {:5.2f} | {:72.72} | {:9d} | {:6d} | {:12d}'.format(
-                           ss1.sentiment.polarity, 
-                           ss2['compound'],
-                           line,
-                           len(tweet_sent),
-                           len(tweet_word),
-                           len(tweet_unique)
-                           ))
+        print('{:8.2f} | {:5.2f} | {:72.72} | {:9d} | {:6d} | {:12d}'.format(
+            ss1.sentiment.polarity,
+            ss2['compound'],
+            line,
+            len(tweet_sent),
+            len(tweet_word),
+            len(tweet_unique)
+        ))
 
-print ('\n-------------------------')
-print ('Sentiment analysis summary:')
-print ('TextBlob Average {:.2f}'.format(tss1/len(tweets)))
-print ('NLTK Average {:.2f}'.format(tss2/len(tweets)))
+print('\n-------------------------')
+print('Sentiment analysis summary:')
+print('TextBlob Average {:.2f}'.format(tss1/len(tweets)))
+print('NLTK Average {:.2f}'.format(tss2/len(tweets)))
 
 if UPDATE_FILE:
     # Update JSON file
-    print ('\n')
-    print ('*****************')
-    print ('Updating JSON file...')
+    print('\n')
+    print('*****************')
+    print('Updating JSON file...')
     with open(tweet_file, 'w', encoding='utf-8') as file:
         json.dump(tweets, file, sort_keys=True, indent=4)
-    print ('File {} updated. Process complete!'.format(tweet_file))
+    print('File {} updated. Process complete!'.format(tweet_file))
     file.close()

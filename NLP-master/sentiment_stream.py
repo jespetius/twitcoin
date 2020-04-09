@@ -47,4 +47,4 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True,
 streamListener = TwitterStreamListener()
 myStream = tweepy.Stream(auth=api.auth, listener=streamListener)
 # Hakusana
-myStream.filter(track=["premier league"])
+myStream.filter(track=["corona"])

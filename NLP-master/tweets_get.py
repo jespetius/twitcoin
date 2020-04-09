@@ -1,52 +1,9 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""
-get_tweets.py
-Date created: 10-Nov-2018
-Version: 2.0
-Author: Stein Castillo
-Copyright 2018 Stein Castillo <stein_castillo@yahoo.com>  
-
-Summary:
-************
-This routine will fetch the tweets of an specific user and create a JSON file
-with the results. This file can be used with the analysis tools of this libary:
-    * tweets_sentiment.py : Analyze tweets sentiment
-    * tweets_text_analisys.py: Text analysis
-    * tweets_scatter_v2.py: Plot sentiment analysis
-
-Note that the maximum tweet count to download is 200 as this is limited by
-the twitter API.
-
-Requisites:
-***********
-Create a file named: auth.py
-
-add the following lines:
-consumer_key = 'your consumer key'
-consumer_secret = 'your consumer secret'
-access_token = 'your access token'
-access_token_secret = 'your token secret'
-
-The following libraries must be installed:
-- twython
-
-USAGE: 
-***********
-python tweets_get.py --user <twitter_user> [--count <number_of_tweets>]
-
-note: the maximum number of tweets is 200
-"""
-
-#############
-# Libraries
-#############
 from twython import Twython
 import re
 import json
 import argparse
 import warnings
+
 
 # Get Twitter authentication credentials
 from auth import (
