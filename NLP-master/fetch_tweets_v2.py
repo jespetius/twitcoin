@@ -17,17 +17,6 @@ from auth import (
     access_token_secret)
 
 
-def remove_regex(input_text, regex_pattern):
-    # Remove a regular expression (regex) from a string
-    urls = re.finditer(regex_pattern, input_text)
-    for i in urls:
-        try:
-            input_text = re.sub(i.group().strip(), '', input_text)
-        except:
-            print('Regex exception')
-
-    return input_text
-
 
 twitter = Twython(
     consumer_key,
