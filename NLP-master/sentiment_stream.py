@@ -20,7 +20,7 @@ def clean_tweet(tweet):
 
 
 # Sentiment analysis TextBlobilla
-def analize_sentiment(tweet):
+def analyze_sentiment(tweet):
     analysis = TextBlob(clean_tweet(tweet))
     if analysis.sentiment.polarity > 0:
         return 1
@@ -35,7 +35,7 @@ class TwitterStreamListener(tweepy.StreamListener):
     def on_status(self, status):
         print(status.text)
         print(status.user.profile_image_url_https)
-        print(analize_sentiment(status.text))
+        print(analyze_sentiment(status.text))
 
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
