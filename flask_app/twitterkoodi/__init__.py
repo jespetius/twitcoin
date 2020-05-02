@@ -5,12 +5,14 @@ from flask import Flask, request, jsonify, render_template
 import requests
 from flask_restful import Resource, Api
 from twython import Twython
-#from dotenv import load_dotenv
-#load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
+import tweepy as tw
+import pandas as pd
+
 app = Flask(__name__)
 api = Api(app)
 
-#from auth import consumer_key, consumer_secret, access_token, access_token_secret
 
 class bitcoin(Resource):
     def get(self):
@@ -19,29 +21,34 @@ class bitcoin(Resource):
         data = json.loads(json_url.read())
         return {'kurssit': data}
 
-#class tweets(Resource):
-#    def get(self):
-#        twitter = Twython(
-#        consumer_key,
-#        consumer_secret,
-#        access_token,
-#        access_token_secret)
-#
-#        search_words = "bitcoin"
-#        date_since = "2020-04-06"
-#        count = 10#
-#
-#        tweets = twitter.search(
-#            q=search_words,
-#            count=count,
-#            since=date_since,
-#           tweet_mode='extended'
-#        )
-#
-#        for tweet in tweets:
-#              tweet = tweet.json
-#        return {tweet}   
+
+#testing
+class Testi(Resource):
+    def get(self):
+        return {'about':'Testi'}
+
+    def post(self):
+        some_json = request.get_json()
+        return {'you sent': some_json}, 201
+
+class Tweets(Resource):
+    def get(self):
+        # Tunnistusobjektin luominen
+        auth = tw.OAuthHandler(os.getenv('twitter_consumer_key'),
+                       os.getenv('twitter_consumer_secret'))
+        # Access tokenien asettaminen
+        auth.set_access_token(os.getenv('twitter_access_token'),
+                      os.getenv('twitter_access_token_secret'))
+        # API-objektin luominen ja auth informaation puskeminen
+        api = tw.API(auth)
+
+        user = api.get_user('realdonaldtrump')
+        return {'userscreenname': user.screen_name}      
+        
+
+
 
 
 api.add_resource(bitcoin, '/bitcoin')
-#api.add_resource(tweets, '/tweets')
+api.add_resource(Testi, '/testi')
+api.add_resource(Tweets, '/tweets')

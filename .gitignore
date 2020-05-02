@@ -3,3 +3,4 @@ NLP-master/auth.py
 NLP-master/__pycache__/
 *NLP-master/.csv
 *NLP-master/.json
+flask_app/twitterkoodi/.env
