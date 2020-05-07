@@ -8,4 +8,4 @@ A school project around sentiment analysis
 ## Keywords
 Twitter,  Python
 ## Authors
-Jesperi, Joonas, Mikko & Ossi
+Jesperi, Mikko & Ossi

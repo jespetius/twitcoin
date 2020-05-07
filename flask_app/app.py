@@ -18,11 +18,12 @@ def user():
     return jsonify({"key": user})
 
 
-@app.route('/search', methods=['POST'])
-def search():
-    # user_search = request.form['searchform']
-    # user_search = user
-    return sentiment_analysis()
+# @app.route('/search', methods=['POST'])
+# def search():
+
+#     # user_search = request.form['searchform']
+#     # user_search = user
+#     return sentiment_analysis()
 
 # index
 @app.route('/')
