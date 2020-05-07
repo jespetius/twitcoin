@@ -92,8 +92,9 @@ if not(file_check.is_file()):
 
 # Read the tweets file
 print('Reading tweets file...')
+print(type(tweet_file))
 tweets = read_json(tweet_file)
-
+print(type(tweets))
 # Initalize tweeter tokenizer
 tTokenizer = TweetTokenizer()
 
@@ -106,14 +107,17 @@ tss2 = 0.0
 
 # Analyze tweet sentiment
 print('Analyzing tweet sentiment...')
+print(type(tweets))
 
 if PRINT_OUT:
     print('--------------------------------------------------------------------------------------------------------------------------------')
     print('TextBlob | NLTK  |                                    Tweet text                            | Sentences | Words  | Unique Words')
     print('--------------------------------------------------------------------------------------------------------------------------------')
 
+
 for tweet in tweets:
     # get text from tweet
+    print(type(tweets))
     if tweet['truncated']:
         line = tweet['extended_tweet']['full_text']
     elif 'text' in tweet:
@@ -165,7 +169,7 @@ print('\n-------------------------')
 print('Sentiment analysis summary:')
 print('TextBlob Average {:.2f}'.format(tss1/len(tweets)))
 print('NLTK Average {:.2f}'.format(tss2/len(tweets)))
-
+print(type(tweet))
 if UPDATE_FILE:
     # Update JSON file
     print('\n')

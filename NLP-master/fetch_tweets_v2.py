@@ -73,13 +73,13 @@ class NormalizeText():
 
 
 # Hakusanat
-search_words = "football"
+user = "selenagomez"
 # date_since = "2020-04-06"
 count = "10"
 
 print("datatypes")
 print(type(count))
-print(type(search_words))
+
 
 # try:
 #     search_details = twitter.search(q=search_words)
@@ -100,19 +100,18 @@ print(type(search_words))
 #     search_details[0]['followers_count']))
 # print('\n')
 
+#############################################################################
+
 # Haetaan twiittejä parametreillä
 try:
-    tweets = twitter.search(
-        q=search_words,
-        count=count,
-        # since=date_since,
-        tweet_mode='extended'
-    )
-    print("Tweets succesfully retrieved!")
+    user_timeline = twitter.get_user_timeline(screen_name=user,
+                                              count=count,
+                                              tweet_mode='extended')
+    print('Tweets succesfully retrieved!')
 except:
-    raise ValueError('Tweets could not be retrieved!')
+    raise ValueError('Tweets could not be retrived!')
 
-
+################################################################################
 # tweets = tw.Cursor(api.search,
 #                    q=search_words,
 #                    lang="en",
@@ -120,10 +119,10 @@ except:
 
 # Luodaan twiiteistä JSON-tiedosto
 print('Creating JSON file...')
-filename = search_words+'.json'
+filename = user+'.json'
 
 with open(filename, 'w', encoding='utf-8') as file:
-    json.dump(tweets, file, sort_keys=True, indent=4)
+    json.dump(user_timeline, file, sort_keys=True, indent=4)
 
 print('{} created'.format(filename))
 
@@ -135,7 +134,7 @@ tweet_file = filename
 print("Reading the file...")
 tweets_2 = read_json(tweet_file)
 print(type(tweets_2))
-tweets_2.items()
+# tweets_2.items()
 print(type(tweets_2))
 
 # Alustetaan tweeter tokenizer
