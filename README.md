@@ -140,7 +140,7 @@ Project Link: [Twitcoin](https://github.com/jespetius/twitcoin)
 
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
 [contributors-url]: https://github.com/jespetius/twitcoin/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/jespetius/twitcoin
 [forks-url]: https://github.com/jespetius/twitcoin/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
 [stars-url]: https://github.com/jespetius/twitcoin/stargazers
