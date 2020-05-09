@@ -13,7 +13,7 @@ export default function HomeScreen() {
   const [value, onChangeText] = React.useState("");
   const [tweets, setTweets] = React.useState([]);
   const searchTweets = (event) => {
-    console.log("Moroporo");
+    console.log("Easter egg");
     event.preventDefault();
     const reqestOptions = {
       method: "POST",
