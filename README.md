@@ -138,6 +138,7 @@ Project Link: [Twitcoin](https://github.com/jespetius/twitcoin)
 
 
 
+<<<<<<< HEAD
 [contributors-shield]: https://img.shields.io/github/contributors/jespetius/twitcoin.svg?style=flat-square
 [contributors-url]: https://github.com/jespetius/twitcoin/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/jespetius/twitcoin.svg?style=flat-square
@@ -147,5 +148,16 @@ Project Link: [Twitcoin](https://github.com/jespetius/twitcoin)
 [issues-shield]: https://img.shields.io/github/issues/jespetius/twitcoin.svg?style=flat-square
 [issues-url]: https://github.com/jespetius/twitcoin/issues
 [license-shield]: https://img.shields.io/github/license/jespetius/twitcoin.svg?style=flat-square
+=======
+[contributors-shield]: https://img.shields.io/github/contributors/jespetius/twitcoin
+[contributors-url]: https://github.com/jespetius/twitcoin/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jespetius/twitcoin
+[forks-url]: https://github.com/jespetius/twitcoin/network/members
+[stars-shield]: https://img.shields.io/github/stars/jespetius/twitcoin
+[stars-url]: https://github.com/jespetius/twitcoin/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jespetius/twitcoin
+[issues-url]: https://github.com/jespetius/twitcoin/issues
+[license-shield]: https://img.shields.io/github/license/jespetius/twitcoin
+>>>>>>> 3fbb4f7f652a3c1869241e420162ec02e475ac1c
 [license-url]: https://github.com/jespetius/twitcoin/blob/master/LICENSE
 [product-screenshot]: images/screenshot.png
