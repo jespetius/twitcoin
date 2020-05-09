@@ -1,15 +1,18 @@
 
 # testaus pelkka flask
 from flask import Flask, request, jsonify, render_template
-from tweets_get import sentiment_analysis
+from fetch_tweets_v2 import search_user
 import requests
+import cgi
 app = Flask(__name__)
+form = cgi.FieldStorage()
 
 # json testi
 @app.route('/json', methods=['GET', 'POST'])
 def json():
-    testi = "testi"
-    return jsonify({"key": testi})
+    name = request.form.get("searchform")
+
+    return jsonify(search_user(name, 50))
 
 # user jsonina
 @app.route('/user', methods=['POST'])
