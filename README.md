@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jespetius/twitcoin">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Twitcoin</h3>
@@ -28,7 +28,7 @@
 </p>
 
 
-## Sisällysluettelo
+## Contents
 
 * [About the Project](#about-the-project)
   * [Built With](#built-With)
@@ -56,7 +56,7 @@ Our main goal is to offer an alternative option to gain information.
 
 
 <!-- Viitekehykset, jota olemme käyttäneet projektissamme -->
-### Built With
+## Built With
 
 * [React](https://reactjs.org/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
