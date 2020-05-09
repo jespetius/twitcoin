@@ -14,7 +14,7 @@
   <h3 align="center">Twitcoin</h3>
 
   <p align="center">
-    Twicoinin avulla voit hakea suoraan tietoa kryptovaluutoista ja twiiteistä!
+    Twitcoin - a new kind of a search engine.
     <br />
     <a href="https://github.com/jespetius/twitcoin"><strong>GitHub »</strong></a>
     <br />
@@ -76,7 +76,7 @@ If you want to use your application, you can do so by following the next steps.
 <!-- Mitä kaikkea ohjelman käyttäminen vaatii -->
 ### Prerequisites
 
-Tarvit seuraavia asioita, jotta ohjelman käyttö olisi mahdollista:
+Install the following packages and/or files
 * npm
 ```sh
 npm install npm@latest -g
@@ -139,13 +139,12 @@ Project Link: [Twitcoin](https://github.com/jespetius/twitcoin)
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-url]: https://github.com/jespetius/twitcoin/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[forks-url]: https://github.com/jespetius/twitcoin/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[stars-url]: https://github.com/jespetius/twitcoin/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-url]: https://github.com/jespetius/twitcoin/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[license-url]: https://github.com/jespetius/twitcoin/blob/master/LICENSE
