@@ -56,7 +56,7 @@ Our main goal is to offer an alternative option to gain information.
 
 
 <!-- Viitekehykset, jota olemme käyttäneet projektissamme -->
-## Built With
+### Built With
 
 * [React](https://reactjs.org/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
@@ -148,3 +148,4 @@ Project Link: [Twitcoin](https://github.com/jespetius/twitcoin)
 [issues-url]: https://github.com/jespetius/twitcoin/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
 [license-url]: https://github.com/jespetius/twitcoin/blob/master/LICENSE
+[product-screenshot]: images/screenshot.png
