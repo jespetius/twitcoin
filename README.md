@@ -138,14 +138,14 @@ Project Link: [Twitcoin](https://github.com/jespetius/twitcoin)
 
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/jespetius/twitcoin
 [contributors-url]: https://github.com/jespetius/twitcoin/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/jespetius/twitcoin
 [forks-url]: https://github.com/jespetius/twitcoin/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/jespetius/twitcoin
 [stars-url]: https://github.com/jespetius/twitcoin/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/jespetius/twitcoin
 [issues-url]: https://github.com/jespetius/twitcoin/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/jespetius/twitcoin
 [license-url]: https://github.com/jespetius/twitcoin/blob/master/LICENSE
 [product-screenshot]: images/screenshot.png
