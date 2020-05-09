@@ -147,4 +147,4 @@ Project Link: [Twitcoin](https://github.com/jespetius/twitcoin)
 [issues-shield]: https://img.shields.io/github/issues/jespetius/twitcoin.svg?style=flat-square
 [issues-url]: https://github.com/jespetius/twitcoin/issues
 [license-shield]: https://img.shields.io/github/license/jespetius/twitcoin.svg?style=flat-square
-
+[license-url]: https://github.com/jespetius/twitcoin/blob/master/LICENSE
