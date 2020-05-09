@@ -120,7 +120,7 @@ If you are interested in bringing your contribution to the project, you can do s
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://opensource.org/licenses/MIT) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/jespetius/twitcoin/blob/master/LICENSE) for more information.
 
 ## Contact Us
 
@@ -138,14 +138,14 @@ Project Link: [Twitcoin](https://github.com/jespetius/twitcoin)
 
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/jespetius/twitcoin.svg?style=flat-square
 [contributors-url]: https://github.com/jespetius/twitcoin/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/jespetius/twitcoin.svg?style=flat-square
 [forks-url]: https://github.com/jespetius/twitcoin/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/jespetius/twitcoin.svg?style=flat-square
 [stars-url]: https://github.com/jespetius/twitcoin/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/jespetius/twitcoin.svg?style=flat-square
 [issues-url]: https://github.com/jespetius/twitcoin/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/jespetius/twitcoin.svg?style=flat-square
 [license-url]: https://github.com/jespetius/twitcoin/blob/master/LICENSE
 [product-screenshot]: images/screenshot.png
