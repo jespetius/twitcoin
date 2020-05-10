@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jespetius/twitcoin">
-    <img src="images/logo.jpg" alt="Logo" width="180" height="180">
+    <img src="images/logo.jpg" alt="Logo" width="240" height="180">
   </a>
 
   <h3 align="center">Twitcoin</h3>
