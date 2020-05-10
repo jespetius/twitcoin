@@ -8,13 +8,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/jespetius/twitcoin">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.jpg" alt="Logo" width="180" height="180">
   </a>
 
   <h3 align="center">Twitcoin</h3>
 
   <p align="center">
-    Twicoinin avulla voit hakea suoraan tietoa kryptovaluutoista ja twiiteistä!
+    Twitcoin - a new kind of a search engine.
     <br />
     <a href="https://github.com/jespetius/twitcoin"><strong>GitHub »</strong></a>
     <br />
@@ -28,7 +28,7 @@
 </p>
 
 
-## Sisällysluettelo
+## Contents
 
 * [About the Project](#about-the-project)
   * [Built With](#built-With)
@@ -76,7 +76,7 @@ If you want to use your application, you can do so by following the next steps.
 <!-- Mitä kaikkea ohjelman käyttäminen vaatii -->
 ### Prerequisites
 
-Tarvit seuraavia asioita, jotta ohjelman käyttö olisi mahdollista:
+Install the following packages and/or files
 * npm
 ```sh
 npm install npm@latest -g
@@ -120,7 +120,7 @@ If you are interested in bringing your contribution to the project, you can do s
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://opensource.org/licenses/MIT) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/jespetius/twitcoin/blob/master/LICENSE) for more information.
 
 ## Contact Us
 
@@ -138,14 +138,14 @@ Project Link: [Twitcoin](https://github.com/jespetius/twitcoin)
 
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[contributors-shield]: https://img.shields.io/github/contributors/jespetius/twitcoin.svg?style=flat-square
+[contributors-url]: https://github.com/jespetius/twitcoin/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jespetius/twitcoin.svg?style=flat-square
+[forks-url]: https://github.com/jespetius/twitcoin/network/members
+[stars-shield]: https://img.shields.io/github/stars/jespetius/twitcoin.svg?style=flat-square
+[stars-url]: https://github.com/jespetius/twitcoin/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jespetius/twitcoin.svg?style=flat-square
+[issues-url]: https://github.com/jespetius/twitcoin/issues
+[license-shield]: https://img.shields.io/github/license/jespetius/twitcoin.svg?style=flat-square
+[license-url]: https://github.com/jespetius/twitcoin/blob/master/LICENSE
+[product-screenshot]: images/screenshot.png
