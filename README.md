@@ -49,9 +49,7 @@ Twitter, Python
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Twitcoin is a software aiming to retrieve data from tweets with the help of [Twitter's free API](https://developer.twitter.com/en/apply-for-access). Our main goal is to grant users an easily accessible information through our app. The application mainly functions as a search engine, where the user can input a word and it calculates if the word is either positive or negative. The user can also search information about currencies and their values.
-
-Our main goal is to offer an alternative option to gain information.
+Twitcoin is a software aiming to retrieve data from tweets with the help of [Twitter's free API](https://developer.twitter.com/en/apply-for-access). Our main goal is to grant users an easily accessible information through our app. At this stage of the project, the application can search tweets and return their sentiment analysis.
 
 
 
