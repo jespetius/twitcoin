@@ -15,12 +15,12 @@ export default function HomeScreen() {
   const searchTweets = (event) => {
     console.log("Moroporo");
     event.preventDefault();
-    const reqestOptions = {
+    const requestOptions = {
       method: "POST",
       body: JSON.stringify({ name: value }),
     };
 
-    fetch("http://localhost:5000/json", reqestOptions)
+    fetch("http://localhost:5000/json", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         setTweets(data);
