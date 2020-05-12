@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jespetius/twitcoin">
-    <img src="images/logo.jpg" alt="Logo" width="240" height="180">
+    <img src="images/logo.jpg" alt="Logo" width="280" height="180">
   </a>
 
   <h3 align="center">Twitcoin</h3>
@@ -21,9 +21,9 @@
     <br />
     <a href="https://github.com/jespetius/twitcoin">Watch demo</a>
     ·
-    <a href="https://github.com/jespetius/twitcoin/issues">Report a bug</a>
+    <a href="https://github.com/jespetius/twitcoin/issues/new">Report a bug</a>
     ·
-    <a href="https://github.com/jespetius/twitcoin/issues">Request a feature</a>
+    <a href="https://github.com/jespetius/twitcoin/issues/new">Request a feature</a>
   </p>
 </p>
 
