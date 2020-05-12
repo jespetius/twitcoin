@@ -14,7 +14,7 @@
   <h3 align="center">Twitcoin</h3>
 
   <p align="center">
-    Twitcoin - a new kind of a search engine.
+    Twitcoin - a data fetching application.
     <br />
     <a href="https://github.com/jespetius/twitcoin"><strong>GitHub »</strong></a>
     <br />
