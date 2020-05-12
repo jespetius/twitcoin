@@ -56,7 +56,7 @@ Twitcoin is a software aiming to retrieve data from tweets with the help of [Twi
 <!-- Viitekehykset, jota olemme käyttäneet projektissamme -->
 ### Built With
 
-* [React](https://reactjs.org/)
+* [React Native](https://reactnative.dev/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 <!-- 
 * []()
