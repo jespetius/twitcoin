@@ -36,6 +36,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#Installation)
 * [Usage](#usage)
+* [The Futher Development](#the-futher-development)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact Us](#contact-us)
@@ -133,6 +134,9 @@ If your cmd shows this, you are good to go.
 ```sh
 expo start
 ```
+## The Further Development
+We have multiple development ideas we want to do. 
+[Development ideas](https://github.com/jespetius/twitcoin/issues)
 
 ## Contributing
 
