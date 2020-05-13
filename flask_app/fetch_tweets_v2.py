@@ -26,7 +26,7 @@ twitter = Twython(
     access_token,
     access_token_secret)
 
-# JSON luku ja Linkkien poisto funktiot
+# Read json-file & remove link functions
 
 
 def read_json(json_file):
@@ -46,7 +46,7 @@ def remove_links(text):
             pass
     return (text)
 
-# Tekstin normalisointi
+# text normalization
 
 
 class NormalizeText():
@@ -72,7 +72,7 @@ class NormalizeText():
         return s
 
 
-# # Hakusanat
+# # Search words
 # user = "selenagomez"
 # # date_since = "2020-04-06"
 # count = "20"
@@ -102,7 +102,7 @@ class NormalizeText():
 
 #############################################################################
 
-# Haetaan twiittejä parametreillä
+# Fetch tweets with parameters
 def search_user(user, count):
 
     try:
@@ -119,7 +119,7 @@ def search_user(user, count):
     #                    lang="en",
     #                    since=date_since).items(50)
 
-    # Luodaan twiiteistä JSON-tiedosto
+    # Create JSON-file from tweets
     print('Creating JSON file...')
     filename = user+'.json'
 
@@ -131,20 +131,20 @@ def search_user(user, count):
     print(type(filename))
     tweet_file = filename
 
-    # Luetaan JSON-tiedosto
+    # Read JSON-file
     print("Reading the file...")
     tweets_2 = read_json(tweet_file)
     print(type(tweets_2))
     # tweets_2.items()
     print(type(tweets_2))
 
-    # Alustetaan tweeter tokenizer
+    # initialize tweeter tokenizer
     tTokenizer = TweetTokenizer()
 
-    # Alustetaan NLTK sentiment analyzer
+    # initialize NLTK sentiment analyzer
     sid = SentimentIntensityAnalyzer()
 
-    # Alustetaan kumulaattorit keskiarvon laskemiseen
+    # initialize cumulator for avg.
     tss1 = 0.0
     tss2 = 0.0
 
@@ -156,7 +156,7 @@ def search_user(user, count):
     --------------------------------------------------------------------------------------------------------------------------------""")
 
     for tweet in tweets_2:
-        # haetaan texti twiiteistä
+        # get text from tweets
         if tweet['truncated']:
             line = tweet['extended_tweet']['full_text']
         elif 'text' in tweet:
@@ -164,15 +164,15 @@ def search_user(user, count):
         else:
             line = tweet['full_text']
 
-        # Leading ja trailing kirjaimien poisto
+        # delete Leading & trailing characters
         line = line.strip()
-        # Linkkien poisto
+        # Remove links
         line = remove_links(line)
 
-        # New line poisto
+        # Remove new line
         line = line.replace('\n', ' ')
 
-        # Non-ascii poisto
+        # Remove Non-ascii
         line = NormalizeText.remove_nonascii(line)
 
         # Tokenize text
@@ -184,15 +184,15 @@ def search_user(user, count):
         ss1 = TextBlob(line)
         ss2 = sid.polarity_scores(line)
 
-        # Kumulaattorien päivitys
+        # Update Cumulators
         tss1 += ss1.sentiment.polarity
         tss2 += ss2['compound']
 
-        # lisätään tulokset JSON-tiedostoon
+        # Add updates to the JSON-file
         tweet.update(
             {'sentiment': {'textblob': ss1.sentiment.polarity, 'nltk': ss2['compound']}})
 
-        # Näytetään tulokset
+        # Show results
         print('{:8.2f} | {:5.2f} | {:72.72} | {:9d} | {:6d} | {:12d}'.format(
             ss1.sentiment.polarity,
             ss2['compound'],
@@ -207,7 +207,7 @@ def search_user(user, count):
     print('TextBlob Average {:.2f}'.format(tss1/len(tweets_2)))
     print('NLTK Average {:.2f}'.format(tss2/len(tweets_2)))
 
-    # Päivitetään JSON file
+    # Update JSON file
     print('\n')
     print('*****************')
     print('Updating JSON file...')

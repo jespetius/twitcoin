@@ -9,11 +9,13 @@ import {
   AsyncStorage,
 } from "react-native";
 
+// Fetch Sentiment analyse results via Flask
+
 export default function HomeScreen() {
   const [value, onChangeText] = React.useState("");
   const [tweets, setTweets] = React.useState([]);
   const searchTweets = (event) => {
-    console.log("Easter egg");
+    // console.log("test");
     event.preventDefault();
     const requestOptions = {
       method: "POST",
