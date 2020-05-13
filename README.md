@@ -90,8 +90,7 @@ git clone https://github.com/jespetius/twitcoin.git
 ```
 3. Install the NPM packages & expo
 ```sh
-npm install
-npm install expo
+npm install –g expo-cli
 ```
 4. Create an auth.py file inside the flask_app
 ```sh
