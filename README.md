@@ -49,7 +49,7 @@ Twitter, Python
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Twitcoin is a software aiming to retrieve data from tweets with the help of [Twitter's free API](https://developer.twitter.com/en/apply-for-access). Our main goal is to grant users an easily accessible information through our app. At this stage of the project, the application can search tweets and return their sentiment analysis.
+Twitcoin is a project aimed at retrieving data from tweets with the help of [Twitter's free API](https://developer.twitter.com/en/apply-for-access) and natural language processing. Our main goal is to grant users an easier way to access the vast sea of information on Twitter through our app. At this stage of the project, the application can search a users tweets and return their sentiment analysis.
 
 
 
@@ -66,8 +66,8 @@ Twitcoin is a software aiming to retrieve data from tweets with the help of [Twi
 <!-- Aloitusprosessi, miten ohjelmaa voi itse käyttää -->
 ## Getting Started
 
-Our application has a free access to everyone.
-If you want to use your application, you can do so by following the next steps.
+Our application is free for everyone to access.
+If you want to use your application, you can do so easily by following the next steps.
 
 
 
@@ -82,6 +82,11 @@ npm install npm@latest -g
 * pip
 ```sh
 pip install -r requirements.txt
+python
+import nltk
+nltk.download()
+nltk.download('vader_lexicon')
+nltk.download('punkt')
 ```
 
 <!-- Asennusohjeet -->
@@ -93,11 +98,19 @@ pip install -r requirements.txt
 ```sh
 git clone https://github.com/jespetius/twitcoin.git
 ```
-3. Install the NPM packages
+3. Install the NPM packages & expo
 ```sh
 npm install
+npm install expo
 ```
-4. Create an auth.py file, where the API-key must be entered
+4. Create an auth.py file inside the flask_app
+```sh
+consumer_key = 'YOUR KEY HERE'
+consumer_secret = 'YOUR KEY HERE' 
+access_token = 'YOUR KEY HERE' 
+access_token_secret = 'YOUR KEY HERE'
+
+```
 <!-- Käyttöohjeet -->
 ## Usage
 
@@ -107,7 +120,7 @@ npm install
 
 ## Contributing
 
-If you are interested in bringing your contribution to the project, you can do so by following the next steps.
+If you are interested in contributing to the project, you can easily do so by following the next steps.
 
 1. Fork the Project
 2. Create your Own Branch (`git checkout -b branchname`)
