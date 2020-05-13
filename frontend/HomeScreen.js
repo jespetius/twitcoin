@@ -17,7 +17,6 @@ export default function HomeScreen() {
   const [value, onChangeText] = React.useState("");
   const [tweets, setTweets] = React.useState([]);
   const searchTweets = (event) => {
-    // console.log("test");
     event.preventDefault();
     const requestOptions = {
       method: "POST",
@@ -34,6 +33,7 @@ export default function HomeScreen() {
       });
   };
   console.log(tweets);
+
   return (
     <View style={styles.container}>
      <Image
@@ -51,6 +51,15 @@ export default function HomeScreen() {
       <Text style={styles.text2}>
         Type a search item and some AI magic will try to valuate its positivity
         using data from Twitter and the stock markets around the world.
+      </Text>
+      {tweets.map((tweet) => (
+        <Text key={tweet.id}>{tweet.sentiment.nltk}</Text>
+      ))}
+      <Text style={styles.text2}>
+        Average sentiment is{" "}
+        {tweets.reduce((avg, value, _, { length }) => {
+          return avg + value.sentiment.nltk / length;
+        }, 0)}
       </Text>
     </View>
   );
