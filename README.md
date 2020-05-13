@@ -34,7 +34,7 @@
 
 ## Keywords
 
-Twitter, Python
+Twitter, Python, Flask, React Native
 
 
 ## About the Project
@@ -123,9 +123,8 @@ If your cmd looks like this, you are ready to rock.
 ```sh
 expo start
 ```
-## The Further Development
-We have multiple development ideas. 
-[Development ideas](https://github.com/jespetius/twitcoin/issues)
+## Further Development Ideas
+We have multiple ideas for [further development](https://github.com/jespetius/twitcoin/issues).
 
 ## Contributing
 
