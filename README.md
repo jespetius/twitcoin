@@ -82,6 +82,11 @@ npm install npm@latest -g
 * pip
 ```sh
 pip install -r requirements.txt
+python
+import nltk
+nltk.download()
+nltk.download('vader_lexicon')
+nltk.download('punkt')
 ```
 
 <!-- Asennusohjeet -->
@@ -98,6 +103,13 @@ git clone https://github.com/jespetius/twitcoin.git
 npm install
 ```
 4. Create an auth.py file, where the API-key must be entered
+```sh
+consumer_key = 'YOUR KEY HERE'
+consumer_secret = 'YOUR KEY HERE' 
+access_token = 'YOUR KEY HERE' 
+access_token_secret = 'YOUR KEY HERE'
+
+```
 <!-- Käyttöohjeet -->
 ## Usage
 
