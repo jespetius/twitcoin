@@ -19,11 +19,7 @@
     <a href="https://github.com/jespetius/twitcoin"><strong>GitHub »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jespetius/twitcoin">Watch demo</a>
-    ·
-    <a href="https://github.com/jespetius/twitcoin/issues/new">Report a bug</a>
-    ·
-    <a href="https://github.com/jespetius/twitcoin/issues/new">Request a feature</a>
+  
   </p>
 </p>
 
