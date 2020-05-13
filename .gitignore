@@ -1,6 +1,4 @@
-fetch/.env
-NLP-master/auth.py
-NLP-master/__pycache__/
-*NLP-master/.csv
-*NLP-master/.json
 flask_app/twitterkoodi/.env
+flask_app/__pycache__/
+flask_app/auth.py
+frontend
