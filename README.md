@@ -114,7 +114,7 @@ access_token_secret = 'YOUR KEY HERE'
 <!-- Käyttöohjeet -->
 ## Usage
 
-Start your flask backend by following steps
+1. Start your flask backend by following steps
 ```sh
 set FLASK_APP=YOUR OWN COMPUTER PATH\flask_app\app.py
 cd flask_app
@@ -129,6 +129,11 @@ If your cmd shows this, you are good to go.
  * Debug mode: off
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
+2. Start expo
+```sh
+expo start
+```
+
 ## Contributing
 
 If you are interested in contributing to the project, you can easily do so by following the next steps.
