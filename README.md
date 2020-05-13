@@ -115,13 +115,13 @@ access_token_secret = 'YOUR KEY HERE'
 <!-- Käyttöohjeet -->
 ## Usage
 
-1. Start your flask backend by following steps
+1. Start your flask backend by following these steps
 ```sh
 set FLASK_APP=YOUR OWN COMPUTER PATH\flask_app\app.py
 cd flask_app
 flask run
 ```
-If your cmd shows this, you are good to go.
+If your cmd looks like this, you are ready to rock.
 ```sh
  * Serving Flask app "app.py"
  * Environment: production
@@ -135,7 +135,7 @@ If your cmd shows this, you are good to go.
 expo start
 ```
 ## The Further Development
-We have multiple development ideas we want to do. 
+We have multiple development ideas. 
 [Development ideas](https://github.com/jespetius/twitcoin/issues)
 
 ## Contributing
