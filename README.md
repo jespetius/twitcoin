@@ -14,7 +14,7 @@
   <h3 align="center">Twitcoin</h3>
 
   <p align="center">
-    Twitcoin - a data fetching application.
+    Twitcoin - a school coding project aiming to make sense of the vast sea of information that Twitter is.
     <br />
     <a href="https://github.com/jespetius/twitcoin"><strong>GitHub »</strong></a>
     <br />
