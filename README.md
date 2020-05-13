@@ -27,7 +27,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#Installation)
 * [Usage](#usage)
-* [The Futher Development](#the-futher-development)
+* [Futher Development Ideas](#futher-development-ideas)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact Us](#contact-us)
@@ -48,12 +48,10 @@ Twitcoin is a project aimed at retrieving data from tweets with the help of [Twi
 <!-- Viitekehykset, jota olemme käyttäneet projektissamme -->
 ### Built With
 
-* [React Native](https://reactnative.dev/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-<!-- 
-* []()
-* []()
--->
+* [Python](https://www.python.org/)
+* [React Native](https://reactnative.dev/)
+
 
 <!-- Aloitusprosessi, miten ohjelmaa voi itse käyttää -->
 ## Getting Started
