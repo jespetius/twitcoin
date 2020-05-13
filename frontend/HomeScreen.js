@@ -4,7 +4,9 @@ import {
   Text,
   View,
   Button,
+  ImageBackground,
   Alert,
+  Image,
   TextInput,
   AsyncStorage,
 } from "react-native";
@@ -32,16 +34,19 @@ export default function HomeScreen() {
   console.log(tweets);
   return (
     <View style={styles.container}>
-      <Text>Twitcoin</Text>
+     <Image
+        style={styles.tinyLogo}
+        source={require('../images/logo.jpg')}
+      />
       <TextInput
-        style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+        style={styles.tInput}
         onChangeText={(text) => onChangeText(text)}
         value={value}
       />
       <View style={styles.buttons}>
         <Button onPress={searchTweets} title="Search" />
       </View>
-      <Text>
+      <Text style={styles.text2}>
         Type a search item and some AI magic will try to valuate its positivity
         using data from Twitter and the stock markets around the world.
       </Text>
@@ -52,21 +57,35 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "blue",
-    alignItems: "center",
+    backgroundColor: 'white'
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover"
+  },
+  tinyLogo: {
+    width: 300,
+    height: 150,
+    marginLeft: '38.5%'
+  },
+  buttons: {
+    flexDirection: "row",
     justifyContent: "center",
-    backgroundColor: "white",
   },
   tInput: {
     paddingVertical: 10,
     paddingHorizontal: 5,
     marginVertical: 10,
     borderRadius: 5,
-    width: "50%",
     backgroundColor: "#ffffff70",
+    borderColor: 'black',
+    borderWidth: 1,
+    textAlign: 'center',
+    justifyContent: 'center',
+    margin: 500
   },
-  buttons: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-  },
+  text2: {
+    textAlign: 'center',
+    padding: 25
+  }
 });
