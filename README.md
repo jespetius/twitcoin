@@ -114,10 +114,21 @@ access_token_secret = 'YOUR KEY HERE'
 <!-- Käyttöohjeet -->
 ## Usage
 
--- Keskeneräinen --
-
-
-
+Start your flask backend by following steps
+```sh
+set FLASK_APP=YOUR OWN COMPUTER PATH\flask_app\app.py
+cd flask_app
+flask run
+```
+If your cmd shows this, you are good to go.
+```sh
+ * Serving Flask app "app.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
 ## Contributing
 
 If you are interested in contributing to the project, you can easily do so by following the next steps.
