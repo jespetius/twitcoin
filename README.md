@@ -14,12 +14,16 @@
   <h3 align="center">Twitcoin</h3>
 
   <p align="center">
-    Twitcoin - a school coding project aiming to make sense of the vast sea of information that Twitter is.
+    Twitcoin - a data fetching application.
     <br />
     <a href="https://github.com/jespetius/twitcoin"><strong>GitHub »</strong></a>
     <br />
     <br />
-  
+    <a href="https://github.com/jespetius/twitcoin">Watch demo</a>
+    ·
+    <a href="https://github.com/jespetius/twitcoin/issues/new">Report a bug</a>
+    ·
+    <a href="https://github.com/jespetius/twitcoin/issues/new">Request a feature</a>
   </p>
 </p>
 
@@ -94,11 +98,12 @@ nltk.download('punkt')
 ```sh
 git clone https://github.com/jespetius/twitcoin.git
 ```
-3. Install the NPM packages
+3. Install the NPM packages & expo
 ```sh
 npm install
+npm install expo
 ```
-4. Create an auth.py file, where the API-key must be entered
+4. Create an auth.py file inside the flask_app
 ```sh
 consumer_key = 'YOUR KEY HERE'
 consumer_secret = 'YOUR KEY HERE' 
