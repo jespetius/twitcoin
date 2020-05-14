@@ -27,7 +27,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#Installation)
 * [Usage](#usage)
-* [Futher Development Ideas](#futher-development-ideas)
+* [Further Development Ideas](#further-development-ideas)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact Us](#contact-us)
