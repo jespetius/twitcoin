@@ -10,6 +10,7 @@ import {
   TextInput,
   AsyncStorage,
 } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 
 // Fetch Sentiment analyse results via Flask
 
@@ -36,10 +37,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-     <Image
-        style={styles.tinyLogo}
-        source={require('../images/logo.jpg')}
-      />
+      <Image style={styles.tinyLogo} source={require("../images/logo.jpg")} />
       <TextInput
         style={styles.tInput}
         onChangeText={(text) => onChangeText(text)}
@@ -52,9 +50,13 @@ export default function HomeScreen() {
         Type a search item and some AI magic will try to valuate its positivity
         using data from Twitter and the stock markets around the world.
       </Text>
-      {tweets.map((tweet) => (
-        <Text key={tweet.id}>{tweet.sentiment.nltk}</Text>
-      ))}
+      <ScrollView style={styles.scrollView}>
+        {tweets.map((tweet) => (
+          <Text style={styles.text1} key={tweet.id}>
+            {tweet.sentiment.nltk}
+          </Text>
+        ))}
+      </ScrollView>
       <Text style={styles.text2}>
         Average sentiment is{" "}
         {tweets.reduce((avg, value, _, { length }) => {
@@ -68,16 +70,16 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: "white",
   },
   image: {
     flex: 1,
-    resizeMode: "cover"
+    resizeMode: "cover",
   },
   tinyLogo: {
     width: 300,
     height: 150,
-    marginLeft: '38.5%'
+    marginLeft: "38.5%",
   },
   buttons: {
     flexDirection: "row",
@@ -89,14 +91,21 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     borderRadius: 5,
     backgroundColor: "#ffffff70",
-    borderColor: 'black',
+    borderColor: "black",
     borderWidth: 1,
-    textAlign: 'center',
-    justifyContent: 'center',
-    margin: 500
+    textAlign: "center",
+    justifyContent: "center",
+    margin: 500,
   },
   text2: {
-    textAlign: 'center',
-    padding: 25
-  }
+    textAlign: "center",
+    padding: 25,
+  },
+  text1: {
+    textAlign: "center",
+    marginHorizontal: 20,
+  },
+  scrollView: {
+    marginHorizontal: 20,
+  },
 });
