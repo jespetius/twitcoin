@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
-// Fetch Sentiment analyse results via Flask
+// Fetch Sentiment analysis results via Flask api
 
 export default function HomeScreen() {
   const [value, onChangeText] = React.useState("");
