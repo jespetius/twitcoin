@@ -118,8 +118,9 @@ If your cmd looks like this, you are ready to rock.
  * Debug mode: off
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
-2. Start expo
+2. Start expo in a new terminal
 ```sh
+cd frontend
 expo start
 ```
 ## Further Development Ideas
